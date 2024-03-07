@@ -1,6 +1,7 @@
 import "./table.css";
+import React from "react";
 
-function Sort({ demo }) {
+function Search({ data }) {
   return (
     <>
       <table>
@@ -11,9 +12,9 @@ function Sort({ demo }) {
           </tr>
         </thead>
         <tbody>
-          {demo?.map((item, index) => {
+          {data?.map((item) => {
             return (
-              <tr>
+              <tr key={item.id}>
                 <td>{item.fnm}</td>
                 <td>{item.lnm}</td>
               </tr>
@@ -25,4 +26,4 @@ function Sort({ demo }) {
   );
 }
 
-export default Sort;
+export default Search;
